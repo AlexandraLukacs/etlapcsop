@@ -26,24 +26,25 @@ def etel_kiiras(jel, szoveg, jel2,nyugta_meret,ar):
 def leves_valasztas():
     leves=rendeles.rendelesek(levesek, levesar, "Leves")
     print(f"{leves}-t kért!")
+    return leves
 
 def foetel_valasztas():
     foetelek=rendeles.rendelesek(foetel, foetelar, "Főétel")
     print(f"{foetelek}-t kért!")
+    return foetelek
 
 def ital_valasztas():
     italok=rendeles.rendelesek(itallap, italar, "Italok")
     print(f"{italok}-t kért!")
+    return italok
 
 def desszert_valasztas():
     desszert = rendeles.rendelesek(desszertek, desszertar, "Desszert")
     print(f"{desszert}-t kért!")
+    return desszert
 
 
-def nyugta():
-    keret(meret,karakter)
-    szoveg_kiiras(karakter,"NYUGTA",karakter,meret)
-    keret(meret,karakter)
+
 
 def nyugta_levesek(levesek):
     for i in range(0, len(levesek), 1):

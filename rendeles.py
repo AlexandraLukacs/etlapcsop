@@ -1,13 +1,13 @@
 import etlap
 import osszegzes
 
-levesek = ["Nem kér semmit", "Húsleves", "Gyümölcsleves", "Bableves"]
+levesek = ["0 - Nem kér semmit", "1 - Húsleves", "2 - Gyümölcsleves", "3 - Bableves"]
 levesar = [0,880,600,1200]
-foetel = ["Nem kér semmit", "Tojásos nokedli", "Rántott hús rizibizivel", "Rántott hús sült krumplival"]
+foetel = ["0 - Nem kér semmit", "1 - Tojásos nokedli", "2 - Rántott hús rizibizivel", "3 - Rántott hús sült krumplival"]
 foetelar = [0,880,1500,2000]
-itallap = ["Nem kér semmit", "Coca Cola", "Kőbányai", "Márka szörp"]
+itallap = ["0 - Nem kér semmit", "1 - Coca Cola", "2 - Kőbányai", "3 - Márka szörp"]
 italar = [0,450,450,350]
-desszertek = ["Nem kér semmit", "Tiramisu", "Nutellás palacsinta", "Túrós palacsinta"]
+desszertek = ["0 - Nem kér semmit", "1 - Tiramisu", "2 - Nutellás palacsinta", "3 - Túrós palacsinta"]
 desszertar = [0,650,750,250]
 
 def rendelesek(lista,listaar, cim):
@@ -15,15 +15,16 @@ def rendelesek(lista,listaar, cim):
         print(" ")
         print(" ")
         etlap.lev(lista,listaar, cim)
-        print("Válasszon levest! (0-tól 3-ig válasszon)")
+        print("Válasszon ételt/italt! (0-tól 3-ig válasszon)")
     
 
-        i: int = int(input("írd be hogy hanyas számu levest kéred (Írj egy 0-t ha semmit)"))
+        i: int = int(input("írd be hogy hanyas számu ételt/italt kéred? (Írj egy 0-t ha semmit): "))
 
         ##rendeles = rendeles - 1
         leves = lista[i]
         '''print (leves + "-t kér!")'''
-        return leves
+        return i
+    
 
 
 
